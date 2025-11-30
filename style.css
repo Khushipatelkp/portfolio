@@ -289,3 +289,15 @@ section h2 {
     gap: 10px;
   }
 }
+
+/* Fade-in Animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
