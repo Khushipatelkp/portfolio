@@ -1,11 +1,7 @@
 /* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { scroll-behavior: smooth; }
-body {
-  font-family: "Inter", sans-serif;
-  color: #111;
-  background: #fff;
-}
+body { font-family: "Inter", sans-serif; background: #fff; color: #111; }
 
 /* HEADER */
 header {
@@ -17,156 +13,93 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
   z-index: 1000;
-  transition: 0.3s;
-}
-header.scrolled { padding: 10px 40px; }
-
-header .logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: #111;
-  text-decoration: none;
+  border-bottom: 1px solid #eee;
 }
 
-nav a {
-  margin-left: 26px;
-  font-size: 16px;
-  color: #111;
-  text-decoration: none;
-}
-nav a:hover { opacity: 0.6; }
+header a { text-decoration: none; color: #111; }
 
 /* MOBILE NAV */
 .mobile-menu { display: none; cursor: pointer; }
-.mobile-nav { display: none; background: #fff; padding: 20px; }
+.mobile-nav { display: none; padding: 20px; background: #fff; }
 .mobile-nav a { display: block; padding: 12px 0; font-size: 18px; }
 
 @media(max-width: 780px) {
   nav { display: none; }
   .mobile-menu { display: block; }
-  .mobile-nav.open { display: block; }
 }
 
 /* HERO SECTION */
 .hero {
   width: 100%;
   min-height: 100vh;
-  padding: 0 10%;
+  padding: 180px 10% 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  overflow: visible;
 }
 
-.hero-left {
-  max-width: 540px;
-}
+/* LEFT CONTENT */
+.hero-left { max-width: 500px; }
 
 .hero-left h1 {
-  font-size: 72px;
+  font-size: 70px;
   font-weight: 900;
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
 }
 
 .hero-left p {
   margin-top: 20px;
   font-size: 20px;
   color: #444;
-  opacity: 0;
-  animation: fadeUp 1.3s ease forwards;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0px); }
-}
-
-/* PROFILE IMAGE */
-.hero-img {
-  width: 360px;
-  height: 360px;
-  border-radius: 22px;
-  background: url('WhatsApp Image 2025-11-30 at 12.03.36_96254593.jpg') center/cover no-repeat;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  animation: fadeUp 1.6s ease forwards, floatUpDown 6s ease-in-out infinite;
-}
-
-/* FLOAT + SPIN (IAMDANNA STYLE) */
-@keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes floatUpDown {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-18px); }
-  100% { transform: translateY(0); }
-}
-
-/* SUNFLOWER ICON ANIMATION */
-.sunflower-floating {
-  position: absolute;
-  top: 18%;
-  right: 6%;
-  width: 130px;
-  opacity: 0;
-  animation:
-    fadeUp 1.4s ease forwards,
-    floatUpDown 4.5s ease-in-out infinite,
-    spinSlow 10s linear infinite;
-}
-
-/* RESPONSIVE HERO */
-@media(max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 140px;
-    gap: 40px;
-  }
-
-  .hero-img {
-    width: 250px;
-    height: 250px;
-  }
-
-  .sunflower-floating {
-    width: 80px;
-    right: 50%;
-    top: 6%;
-    transform: translateX(50%);
-  }
-
-  .hero-left h1 { font-size: 54px; }
-  .hero-left p { font-size: 18px; }
 }
 
 /* BUTTONS */
-.btns {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-}
+.btns { margin-top: 30px; display: flex; gap: 20px; }
 .btns a {
   padding: 12px 26px;
   border: 1px solid #111;
   border-radius: 6px;
-  font-weight: 500;
-  color: #111;
   text-decoration: none;
-  transition: 0.3s;
+  color: #111;
 }
-.btns a:hover { background: #111; color: #fff; }
-.btns .black { background: #111; color: #fff; }
+.btns .black {
+  background: #111;
+  color: white;
+}
+
+/* STATIC PROFILE IMAGE */
+.profile-img {
+  width: 300px;
+  height: 380px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* MOBILE HERO FIX */
+@media(max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 160px;
+    gap: 40px;
+  }
+
+  .profile-img {
+    width: 230px;
+    height: 300px;
+  }
+}
 
 /* CONTACT */
-.contact-section { padding: 160px 10%; }
+.contact-section { padding: 160px 10% 140px; }
+.contact-section h2 { font-size: 40px; font-weight: 800; }
 .contact-box {
-  margin-top: 25px;
+  margin-top: 30px;
   padding: 20px;
+  max-width: 340px;
   border-radius: 12px;
   background: #fafafa;
   border: 1px solid #eee;
@@ -175,7 +108,34 @@ nav a:hover { opacity: 0.6; }
 /* FOOTER */
 footer {
   margin-top: 120px;
-  padding: 40px;
   text-align: center;
+  padding: 30px;
   border-top: 1px solid #eee;
+}
+
+/* 🌻 CURSOR FLOWER TRAIL */
+.cursor-flower {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.6);
+  animation: flowerFloat 1.2s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes flowerFloat {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -80%) scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -120%) scale(0.5);
+  }
 }
