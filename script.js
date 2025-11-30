@@ -1,33 +1,44 @@
-// Paste the full JS content from your canvas here
-// Smooth scrolling for navigation (if any links added)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e){
+// ============================
+// Smooth Scroll for Navigation
+// ============================
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-// Contact form submission (demo)
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  alert('Message sent! (Demo form - configure real backend)');
-  form.reset();
-});
+// ============================
+// Fade-in Sections on Scroll
+// ============================
+const faders = document.querySelectorAll('section');
 
-// Optional: simple fade-in animations for sections
-const sections = document.querySelectorAll('section');
-const observer = new IntersectionObserver((entries) => {
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
   entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.classList.add('fade-in');
-    }
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('fade-in');
+    appearOnScroll.unobserve(entry.target);
   });
-}, { threshold: 0.1 });
+}, appearOptions);
 
-sections.forEach(section => {
+faders.forEach(section => {
   section.classList.add('fade-section');
-  observer.observe(section);
+  appearOnScroll.observe(section);
+});
+
+// ============================
+// Contact Form Demo
+// ============================
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you! Your message has been sent (demo).');
+  contactForm.reset();
 });
