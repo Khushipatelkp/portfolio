@@ -11,34 +11,17 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
 });
 
 // ============================
-// Fade-in Sections on Scroll
+// Floating Flowers Animation
 // ============================
-const faders = document.querySelectorAll('section');
+const flowerContainer = document.querySelector('.floating-flowers');
+const totalFlowers = 15; // Number of flowers
 
-const appearOptions = {
-  threshold: 0.2,
-  rootMargin: "0px 0px -50px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('fade-in');
-    appearOnScroll.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(section => {
-  section.classList.add('fade-section');
-  appearOnScroll.observe(section);
-});
-
-// ============================
-// Contact Form Demo
-// ============================
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thank you! Your message has been sent (demo).');
-  contactForm.reset();
-});
+for (let i = 0; i < totalFlowers; i++) {
+  const flower = document.createElement('div');
+  flower.classList.add('flower');
+  flower.style.left = Math.random() * 100 + 'vw';
+  flower.style.animationDuration = 5 + Math.random() * 5 + 's';
+  flower.style.width = 20 + Math.random() * 40 + 'px';
+  flower.style.height = flower.style.width;
+  flowerContainer.appendChild(flower);
+}
