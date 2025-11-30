@@ -22,40 +22,21 @@ header {
   border-bottom: 1px solid #eee;
   transition: 0.3s;
 }
-header.scrolled { padding: 10px 40px; background: rgba(255,255,255,0.95); }
+header.scrolled { padding: 10px 40px; }
 
-header a.logo {
-  font-size: 24px;
-  font-weight: 800;
-  text-decoration: none;
-  color: #111;
-}
-
-/* NAV */
-nav a {
-  margin-left: 26px;
-  font-size: 16px;
-  color: #111;
-  text-decoration: none;
-  position: relative;
-}
-nav a:hover::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -4px;
-  height: 2px;
-  background: #111;
-}
-
-/* MOBILE MENU */
+/* MOBILE NAV */
 .mobile-menu { display: none; cursor: pointer; }
 .mobile-nav { display: none; background: #fff; padding: 20px; }
-.mobile-nav a { display: block; padding: 10px 0; }
+.mobile-nav a { display: block; padding: 12px 0; }
 
+/* MOBILE */
 @media(max-width: 780px) {
   nav { display: none; }
   .mobile-menu { display: block; }
-  .mobile-nav.open { display: block; }
+
+  .mobile-nav.open {
+    display: block;
+  }
 }
 
 /* HERO */
@@ -83,7 +64,20 @@ nav a:hover::after {
   font-size: 20px;
   color: #555;
   opacity: 0;
-  animation: fadeUp 1.3s ease forwards;
+  animation: fadeUp 1.4s ease forwards;
+}
+
+/* FADE UP */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
 }
 
 /* PROFILE IMAGE */
@@ -93,28 +87,41 @@ nav a:hover::after {
   border-radius: 22px;
   background: url('WhatsApp Image 2025-11-30 at 12.03.36_96254593.jpg') center/cover no-repeat;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  animation: fadeUp 1.6s ease forwards;
+  animation: fadeUp 1.6s ease forwards, floatUpDown 6s ease-in-out infinite;
 }
 
-/* SUNFLOWER SPIN */
-@keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+/* SUNFLOWER */
+@keyframes spinSlow { from { transform: rotate(0);} to { transform: rotate(360deg);} }
 
 .sunflower-spin {
   position: absolute;
-  top: 18%;
-  right: 5%;
+  top: 16%;
+  right: 6%;
   width: 120px;
   opacity: 0.95;
-  animation: spinSlow 12s linear infinite;
+  animation: spinSlow 12s linear infinite, floatUpDown 5s ease-in-out infinite;
 }
 
-/* HERO ANIMATION */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* MOBILE HERO */
+@media(max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 140px;
+    gap: 40px;
+  }
+
+  .hero-img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .sunflower-spin {
+    width: 80px;
+    right: 50%;
+    top: 8%;
+    transform: translateX(50%);
+  }
 }
 
 /* BUTTONS */
@@ -128,10 +135,10 @@ nav a:hover::after {
   font-weight: 500;
   transition: 0.3s;
 }
-.btns a:hover { background: #111; color: #fff; }
 .btns .black { background: #111; color: #fff; }
+.btns a:hover { background: #111; color: #fff; }
 
-/* WORK SECTION */
+/* GRID */
 .work-grid {
   margin-top: 80px;
   display: grid;
@@ -139,55 +146,14 @@ nav a:hover::after {
   gap: 35px;
 }
 
-.work-item {
-  border: 1px solid #eee;
-  padding: 20px;
-  background: #fafafa;
-  border-radius: 14px;
-  transition: .3s;
-  cursor: pointer;
-}
-
-.work-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
 /* ABOUT */
 .about-section {
-  padding: 160px 10% 120px;
+  padding: 160px 10% 100px;
 }
 
-.about-section h2 {
-  font-size: 48px;
-  font-weight: 800;
-}
-
-.about-section p {
-  margin-top: 20px;
-  max-width: 750px;
-  font-size: 20px;
-  color: #444;
-}
-
-/* CONTACT */
-.contact-section {
-  padding: 160px 10% 140px;
-}
-
-.contact-box {
-  margin-top: 30px;
-  padding: 20px;
-  max-width: 340px;
-  border-radius: 12px;
-  background: #fafafa;
-  border: 1px solid #eee;
-}
-
-/* FOOTER */
 footer {
   margin-top: 120px;
-  text-align: center;
   padding: 30px;
+  text-align: center;
   border-top: 1px solid #eee;
 }
