@@ -1,10 +1,13 @@
-// Smooth scrolling for internal links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function(e) {
-    if (this.getAttribute("href") !== "#") {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href"))
-        .scrollIntoView({ behavior: "smooth" });
-    }
-  });
+// NAV SHRINK ON SCROLL
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 40);
 });
+
+// MOBILE MENU
+const menuBtn = document.querySelector(".mobile-menu");
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    document.querySelector(".mobile-nav").classList.toggle("open");
+  });
+}
