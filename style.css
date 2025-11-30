@@ -5,7 +5,6 @@ body {
   font-family: "Inter", sans-serif;
   color: #111;
   background: #fff;
-  line-height: 1.6;
 }
 
 /* HEADER */
@@ -18,66 +17,71 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
   border-bottom: 1px solid #eee;
+  z-index: 1000;
   transition: 0.3s;
 }
 header.scrolled { padding: 10px 40px; }
 
+header .logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 26px;
+  font-size: 16px;
+  color: #111;
+  text-decoration: none;
+}
+nav a:hover { opacity: 0.6; }
+
 /* MOBILE NAV */
 .mobile-menu { display: none; cursor: pointer; }
 .mobile-nav { display: none; background: #fff; padding: 20px; }
-.mobile-nav a { display: block; padding: 12px 0; }
+.mobile-nav a { display: block; padding: 12px 0; font-size: 18px; }
 
-/* MOBILE */
 @media(max-width: 780px) {
   nav { display: none; }
   .mobile-menu { display: block; }
-
-  .mobile-nav.open {
-    display: block;
-  }
+  .mobile-nav.open { display: block; }
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
   width: 100%;
   min-height: 100vh;
+  padding: 0 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10%;
   position: relative;
 }
 
-.hero-left { max-width: 540px; }
+.hero-left {
+  max-width: 540px;
+}
 
-.hero h1 {
+.hero-left h1 {
   font-size: 72px;
   font-weight: 900;
   opacity: 0;
   animation: fadeUp 1s ease forwards;
 }
 
-.hero p {
-  margin-top: 22px;
+.hero-left p {
+  margin-top: 20px;
   font-size: 20px;
-  color: #555;
+  color: #444;
   opacity: 0;
-  animation: fadeUp 1.4s ease forwards;
+  animation: fadeUp 1.3s ease forwards;
 }
 
-/* FADE UP */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* FLOAT ANIMATION */
-@keyframes floatUpDown {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-18px); }
-  100% { transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0px); }
 }
 
 /* PROFILE IMAGE */
@@ -90,19 +94,32 @@ header.scrolled { padding: 10px 40px; }
   animation: fadeUp 1.6s ease forwards, floatUpDown 6s ease-in-out infinite;
 }
 
-/* SUNFLOWER */
-@keyframes spinSlow { from { transform: rotate(0);} to { transform: rotate(360deg);} }
-
-.sunflower-spin {
-  position: absolute;
-  top: 16%;
-  right: 6%;
-  width: 120px;
-  opacity: 0.95;
-  animation: spinSlow 12s linear infinite, floatUpDown 5s ease-in-out infinite;
+/* FLOAT + SPIN (IAMDANNA STYLE) */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* MOBILE HERO */
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+/* SUNFLOWER ICON ANIMATION */
+.sunflower-floating {
+  position: absolute;
+  top: 18%;
+  right: 6%;
+  width: 130px;
+  opacity: 0;
+  animation:
+    fadeUp 1.4s ease forwards,
+    floatUpDown 4.5s ease-in-out infinite,
+    spinSlow 10s linear infinite;
+}
+
+/* RESPONSIVE HERO */
 @media(max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -112,48 +129,53 @@ header.scrolled { padding: 10px 40px; }
   }
 
   .hero-img {
-    width: 240px;
-    height: 240px;
+    width: 250px;
+    height: 250px;
   }
 
-  .sunflower-spin {
+  .sunflower-floating {
     width: 80px;
     right: 50%;
-    top: 8%;
+    top: 6%;
     transform: translateX(50%);
   }
+
+  .hero-left h1 { font-size: 54px; }
+  .hero-left p { font-size: 18px; }
 }
 
 /* BUTTONS */
-.btns { margin-top: 40px; display: flex; gap: 20px; }
+.btns {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
 .btns a {
   padding: 12px 26px;
   border: 1px solid #111;
   border-radius: 6px;
-  text-decoration: none;
-  color: #111;
   font-weight: 500;
+  color: #111;
+  text-decoration: none;
   transition: 0.3s;
 }
-.btns .black { background: #111; color: #fff; }
 .btns a:hover { background: #111; color: #fff; }
+.btns .black { background: #111; color: #fff; }
 
-/* GRID */
-.work-grid {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 35px;
+/* CONTACT */
+.contact-section { padding: 160px 10%; }
+.contact-box {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fafafa;
+  border: 1px solid #eee;
 }
 
-/* ABOUT */
-.about-section {
-  padding: 160px 10% 100px;
-}
-
+/* FOOTER */
 footer {
   margin-top: 120px;
-  padding: 30px;
+  padding: 40px;
   text-align: center;
   border-top: 1px solid #eee;
 }
