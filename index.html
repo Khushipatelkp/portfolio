@@ -1,56 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Khushi Patel — Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Khushi Patel – UI/UX Designer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="home-page">
+  <header>
+    <a href="index.html" class="logo">Khushi Patel</a>
 
-<header>
-  <a href="index.html" class="logo">Khushi Patel</a>
-  <nav>
+    <nav>
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="work.html" class="nav-link">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">☰</div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
     <a href="work.html">Work</a>
     <a href="about.html">About</a>
     <a href="#contact">Contact</a>
-  </nav>
-  <div class="mobile-menu">☰</div>
-</header>
-
-<div class="mobile-nav">
-  <a href="work.html">Work</a>
-  <a href="about.html">About</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<section class="hero">
-
-  <div class="hero-left">
-    <h1>Khushi Patel</h1>
-    <p>UI/UX Designer focused on crafting clean, meaningful and user-centered digital experiences through research, interaction and intentional interface design.</p>
-
-    <div class="btns">
-      <a href="work.html">View Work</a>
-      <a href="#contact" class="black">Contact Me</a>
-    </div>
   </div>
 
-  <!-- STATIC PROFILE PHOTO (no animation) -->
-  <img src="WhatsApp Image 2025-11-30 at 12.03.36_96254593.jpg" 
-       class="profile-img" 
-       alt="Khushi Patel">
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <p class="eyebrow">Hi, I’m Khushi Patel.</p>
 
-</section>
+        <h1>
+          UI/UX designer crafting simple, joyful digital experiences.
+        </h1>
 
-<section id="contact" class="contact-section">
-  <h2>Contact</h2>
-  <div class="contact-box">
-    <p>Email:</p>
-    <strong>khushi.patel@example.com</strong>
-  </div>
-</section>
+        <p>
+          I design interfaces that feel clean, approachable, and easy to use,
+          bringing structure to ideas and turning them into thoughtful products.
+          (You can refine this sentence to match your PDF summary.)
+        </p>
 
-<footer>© 2025 Khushi Patel</footer>
-<script src="script.js"></script>
+        <div class="btns">
+          <a href="work.html" class="black">View my work</a>
+          <a href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <!-- SUNFLOWER VISUAL -->
+      <div class="hero-right">
+        <div class="sunflower-frame">
+          <img src="sunflower.png" alt="Sunflower illustration" class="sunflower-img" />
+        </div>
+        <p class="sunflower-caption">
+          Sunflowers instead of bananas, always.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECT (FRESHII) -->
+    <section class="projects-preview">
+      <h2>Selected work</h2>
+
+      <article class="project-card">
+        <p class="project-tag">Product Design · UX · UI</p>
+        <h3>Freshii – Ordering experience redesign</h3>
+        <p>
+          Designing a smoother, more intuitive ordering flow to make healthy
+          choices faster and clearer for Freshii customers.
+        </p>
+        <a href="work.html#freshii" class="project-link">View project →</a>
+      </article>
+
+      <article class="project-card disabled-card">
+        <p class="project-tag">Coming soon</p>
+        <h3>Next case study</h3>
+        <p>
+          More projects will appear here as I add new case studies.
+        </p>
+        <span class="project-link disabled">Coming soon</span>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p>
+          Open to internships, freelance projects, and collaborations.
+        </p>
+        <p>
+          Email:
+          <a href="mailto:khushipatelkp06@gmail.com">khushipatelkp06@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Khushi Patel
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
