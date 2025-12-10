@@ -6,86 +6,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="work-page">
-  <header>
-    <a href="index.html" class="logo">Khushi Patel</a>
-
-    <nav>
+<body class="work">
+  <header class="site-header">
+    <div class="site-logo">KHUSHI PATEL</div>
+    <nav class="site-nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="work.html" class="nav-link active">Work</a>
       <a href="about.html" class="nav-link">About</a>
       <a href="index.html#contact" class="nav-link">Contact</a>
     </nav>
-
-    <div class="mobile-menu" id="mobile-menu">☰</div>
   </header>
 
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="index.html">Home</a>
-    <a href="work.html">Work</a>
-    <a href="about.html">About</a>
-    <a href="index.html#contact">Contact</a>
-  </div>
-
   <main class="work-main">
-    <!-- TOP HERO LIKE JANE NOH -->
-    <section class="page-intro work-hero">
-      <p class="eyebrow">Hello! I’m</p>
+    <!-- TOP INTRO -->
+    <section class="work-intro">
+      <p class="hero-eyebrow">Hello! I’m</p>
       <h1 class="work-name">Khushi Patel.</h1>
       <p class="work-tagline">
-        UI/UX designer with a passion for clean interfaces, thoughtful
+        UI/UX designer with a passion for clear interfaces, thoughtful
         interaction, and experiences that feel simple and friendly.
       </p>
     </section>
 
-    <!-- FRESHII CASE STUDY SECTION LIKE HER FIRST PROJECT BLOCK -->
-    <section id="freshii" class="case-study case-highlight">
-      <div class="case-hero-banner">
-        <div class="case-hero-image left">
-          <!-- replace image later if you have a specific Freshii mockup -->
-          <img
-            src="WhatsApp-Image-2025-11-30-at-12.03.36_96254593.jpg"
-            alt="Freshii redesign mockups"
-          />
-        </div>
-
-        <div class="case-hero-text">
-          <p class="case-project-name">Freshii Ordering Experience</p>
-          <h2>Making healthy ordering faster and clearer.</h2>
-          <p class="case-summary">
-            Redesigning Freshii’s digital flow so people can customize meals,
-            understand prices, and checkout with confidence in fewer steps.
-          </p>
-          <p class="case-meta-line">
-            Project type: Product design · UI/UX<br />
-            Role: End‑to‑end design · research · prototyping
-          </p>
-          <a href="FRESHII-1.pdf" target="_blank" class="btn-link">
-            View case study
-          </a>
-        </div>
+    <!-- FRESHII CASE STUDY CARD -->
+    <section id="freshii" class="work-card">
+      <div class="work-card-image">
+        <img
+          src="WhatsApp-Image-2025-11-30-at-12.03.36_96254593.jpg"
+          alt="Freshii redesign mockups"
+        />
+      </div>
+      <div class="work-card-text">
+        <h2>Freshii Ordering Experience</h2>
+        <p class="work-card-subtitle">
+          Improving clarity and speed in Freshii’s digital ordering flow.
+        </p>
+        <p class="work-card-meta">
+          Project type: Product design · UI/UX<br />
+          Role: End‑to‑end design, research, prototyping
+        </p>
+        <a href="FRESHII-1.pdf" target="_blank" class="work-card-link">
+          View case study
+        </a>
       </div>
     </section>
 
-    <!-- PLACEHOLDER SECTIONS FOR FUTURE PROJECTS -->
-    <section class="case-study case-placeholder">
-      <div class="case-hero-banner">
-        <div class="case-hero-image left">
-          <img src="sunflower.jpg" alt="Upcoming project" />
-        </div>
-        <div class="case-hero-text">
-          <p class="case-project-name">Next project</p>
-          <h2>Another case study coming soon.</h2>
-          <p class="case-summary">
-            When you’re ready, duplicate this layout and swap in your next
-            project’s content.
-          </p>
-        </div>
+    <!-- FUTURE PROJECT PLACEHOLDER -->
+    <section class="work-card disabled">
+      <div class="work-card-image">
+        <img src="sunflower.jpg" alt="Upcoming project" />
+      </div>
+      <div class="work-card-text">
+        <h2>Next project</h2>
+        <p class="work-card-subtitle">
+          Another case study will go here soon.
+        </p>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     © <span id="year"></span> Khushi Patel
   </footer>
 
