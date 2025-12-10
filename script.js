@@ -1,38 +1,34 @@
-// NAV SHADOW
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  header.classList.toggle("scrolled", window.scrollY > 40);
-});
+// MOBILE NAV TOGGLE
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileNav = document.getElementById("mobile-nav");
 
-// MOBILE MENU
-const menuBtn = document.querySelector(".mobile-menu");
-if (menuBtn) {
-  menuBtn.addEventListener("click", () => {
-    document.querySelector(".mobile-nav").classList.toggle("open");
+if (mobileMenu && mobileNav) {
+  mobileMenu.addEventListener("click", () => {
+    if (mobileNav.style.display === "block") {
+      mobileNav.style.display = "none";
+    } else {
+      mobileNav.style.display = "block";
+    }
   });
 }
 
-// ====== 🌻 CURSOR SUNFLOWER TRAIL EFFECT ======
-document.addEventListener("mousemove", (e) => {
-  createFlower(e.pageX, e.pageY);
-});
+// FOOTER YEAR
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-function createFlower(x, y) {
+// 🌻 CURSOR SUNFLOWER TRAIL
+document.addEventListener("mousemove", (e) => {
   const flower = document.createElement("img");
   flower.src = "sunflower.png";
-  flower.classList.add("cursor-flower");
-
-  flower.style.left = x + "px";
-  flower.style.top = y + "px";
+  flower.className = "cursor-flower";
+  flower.style.left = `${e.clientX}px`;
+  flower.style.top = `${e.clientY}px`;
 
   document.body.appendChild(flower);
 
   setTimeout(() => {
     flower.remove();
   }, 1200);
-}
-
-// Disable on mobile
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-  document.removeEventListener("mousemove", () => {});
-}
+});
