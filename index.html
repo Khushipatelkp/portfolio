@@ -6,94 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="home-page">
-  <header>
-    <a href="index.html" class="logo">Khushi Patel</a>
-
-    <nav>
+<body class="home">
+  <!-- TOP NAV -->
+  <header class="site-header">
+    <div class="site-logo">KHUSHI PATEL</div>
+    <nav class="site-nav">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="work.html" class="nav-link">Work</a>
       <a href="about.html" class="nav-link">About</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
-
-    <div class="mobile-menu" id="mobile-menu">☰</div>
   </header>
 
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="index.html">Home</a>
-    <a href="work.html">Work</a>
-    <a href="about.html">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-
   <main>
-    <!-- HERO (CENTERED LIKE DANNA) -->
-    <section class="hero hero-center">
-      <div class="hero-left hero-center-inner">
-        <p class="eyebrow">Hi, I’m Khushi Patel.</p>
-
-        <h1 class="hero-title-center">
-          A UI/UX designer
-          obsessed with understanding why things work and how to make them
-          feel a little less confusing.
-        </h1>
-
-        <!-- you can tweak sentence above to match your PDF summary -->
-      </div>
+    <!-- HERO CENTERED INTRO -->
+    <section class="hero-center">
+      <p class="hero-eyebrow">Hi, I’m Khushi.</p>
+      <h1 class="hero-heading">
+        A UI/UX designer obsessed with understanding why things work and how to
+        make them feel a little less confusing.
+      </h1>
     </section>
 
-    <!-- MAIN PHOTO (WHATSAPP IMAGE) -->
-    <section class="home-photo-strip">
+    <!-- MAIN PERSONAL PHOTO -->
+    <section class="hero-photo-section">
       <img
         src="WhatsApp-Image-2025-11-30-at-12.03.36_96254593.jpg"
         alt="Khushi Patel portrait"
-        class="home-main-photo"
+        class="hero-photo"
       />
     </section>
 
-    <!-- FEATURED PROJECT THUMBNAILS (3 LIKE DANNA) -->
-    <section class="home-projects-row">
+    <!-- THREE PROJECT THUMBNAILS -->
+    <section class="projects-strip">
       <!-- Freshii -->
-      <a href="work.html#freshii" class="home-project-thumb">
+      <a href="work.html#freshii" class="project-thumb">
         <img
           src="WhatsApp-Image-2025-11-30-at-12.03.36_96254593.jpg"
-          alt="Freshii case study thumbnail"
+          alt="Freshii project thumbnail"
         />
+        <h2>Freshii Ordering Experience</h2>
+        <p>End‑to‑end product and UI/UX design for a smoother ordering flow.</p>
       </a>
 
-      <!-- placeholder thumbnails – replace later -->
-      <div class="home-project-thumb disabled-thumb">
-        <img
-          src="sunflower.jpg"
-          alt="Placeholder project"
-        />
+      <!-- Placeholder project 1 -->
+      <div class="project-thumb disabled">
+        <img src="sunflower.jpg" alt="Placeholder project" />
+        <h2>Project coming soon</h2>
+        <p>Another case study will live here soon.</p>
       </div>
 
-      <div class="home-project-thumb disabled-thumb">
-        <img
-          src="sunflower.jpg"
-          alt="Placeholder project"
-        />
+      <!-- Placeholder project 2 -->
+      <div class="project-thumb disabled">
+        <img src="sunflower.jpg" alt="Placeholder project" />
+        <h2>Project coming soon</h2>
+        <p>Another case study will live here soon.</p>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-block">
       <h2>Contact</h2>
-      <div class="contact-box">
-        <p>
-          Open to internships, freelance projects, and collaborations.
-        </p>
-        <p>
-          Email:
-          <a href="mailto:khushipatelkp06@gmail.com">khushipatelkp06@gmail.com</a>
-        </p>
-      </div>
+      <p>Open to internships, freelance projects, and collaborations.</p>
+      <p>
+        Email:
+        <a href="mailto:khushipatelkp06@gmail.com">khushipatelkp06@gmail.com</a>
+      </p>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     © <span id="year"></span> Khushi Patel
   </footer>
 
