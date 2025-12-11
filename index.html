@@ -7,87 +7,73 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="home">
-  <!-- TOP NAV -->
   <header class="site-header">
     <div class="site-logo">KHUSHI PATEL</div>
     <nav class="site-nav">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="work.html" class="nav-link">Projects</a>
       <a href="about.html" class="nav-link">About</a>
-    
     </nav>
   </header>
 
-  <main>
-    <!-- HERO CENTERED INTRO -->
-    <section class="hero-center">
-      <p class="hero-eyebrow">Hi, I’m Khushi.</p>
-      <h1 class="hero-heading">
-        A UI/UX designer obsessed with understanding why things work and how to
-        make them feel a little less confusing.
-      </h1>
-    </section>
+  <!-- floating sunflower background -->
+  <div class="sunflower-bg sunflower-bg-1"></div>
+  <div class="sunflower-bg sunflower-bg-2"></div>
+  <div class="sunflower-bg sunflower-bg-3"></div>
 
-    <!-- MAIN PERSONAL PHOTO -->
-    <section class="hero-photo-section">
-      <img
-        src="WhatsApp-Image-2025-11-30-at-12.03.36_96254593.jpg"
-        alt="Khushi Patel portrait"
-        class="hero-photo"
-      />
-    </section>
-
-       <!-- THREE PROJECT THUMBNAILS -->
-    <section class="projects-strip">
-      <!-- Freshii -->
-      <a href="work.html#freshii" class="project-thumb">
-        <img
-          src="WhatsApp-Image-2025-11-30-at-12.03.36_96254593.jpg"
-          alt="Freshii project thumbnail"
-        />
-        <h2>Freshii Ordering Experience</h2>
-        <p>
-          Redesigning a healthy‑food ordering flow to make customization and
-          checkout feel faster and clearer.
-        </p>
-      </a>
-
-      <!-- Concept 1 -->
-      <div class="project-thumb">
-        <img
-          src="sunflower.jpg"
-          alt="Habit tracking app concept"
-        />
-        <h2>Bloom – Habit tracker</h2>
-        <p>
-          A bright, card‑based mobile app concept that helps people grow small
-          daily habits like watering plants or stretching.
+  <main class="home-main">
+    <!-- hero with text + profile side by side -->
+    <section class="hero-split">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Hi, I’m Khushi.</p>
+        <h1 class="hero-heading">
+          A visual designer who reads between the lines.
+        </h1>
+        <p class="hero-tagline">
+          I shape experiences beyond screens by designing what users feel,
+          not just what they see.
         </p>
       </div>
 
-      <!-- Concept 2 -->
-      <div class="project-thumb">
-        <img
-          src="sunflower.jpg"
-          alt="Recipe dashboard concept"
-        />
-        <h2>Home Chef Dashboard</h2>
-        <p>
-          A responsive recipe and grocery planner interface that keeps weekly
-          meals, ingredients, and shopping lists in one simple view.
-        </p>
+      <div class="hero-profile">
+        <div class="profile-ring">
+          <img
+            src="profile.jpg"
+            alt="Portrait of Khushi Patel"
+            class="profile-photo"
+          />
+        </div>
       </div>
     </section>
 
+    <!-- quick project cards linking to Projects page -->
+    <section class="home-projects-intro">
+      <h2>Selected projects</h2>
+      <div class="home-project-grid">
+        <a href="work.html#freshii" class="home-project-card">
+          <img src="freshii.jpeg" alt="Freshii project cover" />
+          <h3>Freshii – Ordering Experience</h3>
+          <p>
+            Making healthy food ordering faster and clearer from browse to checkout.
+          </p>
+        </a>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-block">
-      <h2>Contact</h2>
-      <p>Open to internships, freelance projects, and collaborations.</p>
-      <p>
-        Email:
-        <a href="mailto:khushipatelkp06@gmail.com">khushipatelkp06@gmail.com</a>
-      </p>
+        <a href="work.html#mejuri" class="home-project-card">
+          <img src="Mejuri.jpg" alt="Mejuri activity project cover" />
+          <h3>Mejuri – Activity Flow</h3>
+          <p>
+            Reframing a jewellery brand’s task flow to feel more intuitive and calm.
+          </p>
+        </a>
+
+        <a href="work.html#circlek" class="home-project-card">
+          <img src="circlek.png" alt="Circle K activity project cover" />
+          <h3>Circle K – Service Journey</h3>
+          <p>
+            Visualizing convenience‑store touchpoints to uncover experience gaps.
+          </p>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -97,4 +83,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
