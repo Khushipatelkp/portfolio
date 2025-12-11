@@ -86,10 +86,11 @@ body {
 .hero-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 13px;
+  font-size: 16px;   /* bigger */
   color: #777;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
+
 
 .hero-heading-playfair {
   font-family: "Playfair Display", serif;
@@ -108,32 +109,32 @@ body {
 }
 
 .hero-spacer {
-  height: 160px;        /* pushes projects further down */
+  height: 220px;   /* more space before projects start */
 }
 
 
 /* HOME PROJECT GRID */
 
-/* HOME PROJECT GRID – bigger cards like Sherpa row */
-
 .home-projects-intro h2 {
   font-size: 24px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   text-align: left;
 }
 
+/* wide row, big gaps so cards feel left / center / right */
 .home-project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;                    /* more space between cards */
+  column-gap: 56px;    /* more side‑to‑side space */
+  row-gap: 0;
 }
 
 .home-project-card {
   text-decoration: none;
   color: inherit;
-  border-radius: 24px;
+  border-radius: 28px;
   border: 1px solid #eee;
-  padding: 22px 22px 24px;      /* more padding like big tiles */
+  padding: 26px 26px 28px;
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -142,9 +143,9 @@ body {
 
 .home-project-card img {
   width: 100%;
-  border-radius: 18px;
+  border-radius: 20px;
   border: 1px solid #f0f0f0;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   display: block;
 }
 
@@ -157,6 +158,9 @@ body {
   font-size: 15px;
   color: #555;
 }
+
+
+
 
 /* card hover */
 
