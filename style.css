@@ -417,3 +417,153 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* logo image in header */
+.logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* center hero on home */
+
+.home-main.home-centered {
+  max-width: 860px;
+  margin: 0 auto 80px;
+  padding: 140px 8% 80px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-center-block {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-heading-playfair {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hero-tagline-inter {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  color: #444;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.hero-spacer {
+  height: 80px;
+}
+
+/* more sunflower icons */
+
+.sunflower-bg-1 { top: 10%; left: 4%; }
+.sunflower-bg-2 { top: 25%; right: 5%; animation-duration: 20s; }
+.sunflower-bg-3 { top: 55%; left: 12%; animation-duration: 24s; }
+.sunflower-bg-4 { top: 70%; right: 12%; animation-duration: 26s; }
+.sunflower-bg-5 { top: 85%; left: 50%; transform: translateX(-50%); animation-duration: 28s; }
+
+/* about page layout */
+
+.about-main {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  padding: 140px 8% 80px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.profile-ring-large {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.about-tagline {
+  font-size: 17px;
+  color: #444;
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.about-copy {
+  text-align: left;
+  margin-top: 24px;
+}
+
+.about-copy p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.about-copy h2 {
+  font-size: 20px;
+  margin: 18px 0 8px;
+}
+
+.about-list {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* bright project cards */
+
+.work-card {
+  margin-top: 30px;
+  border-top: none;
+  padding-top: 0;
+}
+
+.work-card-inner {
+  border-radius: 20px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 24px;
+  color: #111;
+}
+
+.work-card-freshii .work-card-inner {
+  background: #d7f8df; /* soft bright green */
+}
+
+.work-card-mejuri .work-card-inner {
+  background: #ffe7b8; /* warm yellow/orange */
+}
+
+.work-card-circlek .work-card-inner {
+  background: #cde8ff; /* bright blue */
+}
+
+.work-card-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/* responsive for new layouts */
+
+@media (max-width: 900px) {
+  .work-card-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-main {
+    padding-top: 120px;
+  }
+}
