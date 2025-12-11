@@ -93,44 +93,47 @@ body {
 
 .hero-heading-playfair {
   font-family: "Playfair Display", serif;
-  font-size: 46px;
-  line-height: 1.15;
-  margin-bottom: 14px;
+  font-size: 56px;      /* bigger like Danna */
+  line-height: 1.1;
+  margin-bottom: 18px;
 }
 
 .hero-tagline-inter {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;      /* bigger description */
   color: #444;
-  max-width: 520px;
+  max-width: 620px;
   margin: 0 auto;
 }
 
 .hero-spacer {
-  height: 120px;
+  height: 160px;        /* pushes projects further down */
 }
+
 
 /* HOME PROJECT GRID */
 
+/* HOME PROJECT GRID – bigger cards like Sherpa row */
+
 .home-projects-intro h2 {
   font-size: 24px;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
   text-align: left;
 }
 
 .home-project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: 40px;                    /* more space between cards */
 }
 
 .home-project-card {
   text-decoration: none;
   color: inherit;
-  border-radius: 20px;
+  border-radius: 24px;
   border: 1px solid #eee;
-  padding: 14px 14px 18px;
+  padding: 22px 22px 24px;      /* more padding like big tiles */
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -139,19 +142,19 @@ body {
 
 .home-project-card img {
   width: 100%;
-  border-radius: 14px;
+  border-radius: 18px;
   border: 1px solid #f0f0f0;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   display: block;
 }
 
 .home-project-card h3 {
-  font-size: 18px;
-  margin-bottom: 4px;
+  font-size: 20px;
+  margin-bottom: 6px;
 }
 
 .home-project-card p {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
 }
 
