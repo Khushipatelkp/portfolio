@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Khushi Patel – UI/UX Designer</title>
+  <title>Khushi Patel – Visual UI/UX Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,7 +18,7 @@
     </nav>
   </header>
 
-  <!-- more sunflowers in background -->
+  <!-- floating sunflowers in background -->
   <div class="sunflower-bg sunflower-bg-1"></div>
   <div class="sunflower-bg sunflower-bg-2"></div>
   <div class="sunflower-bg sunflower-bg-3"></div>
@@ -26,7 +26,7 @@
   <div class="sunflower-bg sunflower-bg-5"></div>
 
   <main class="home-main home-centered">
-    <!-- hero now centered, no profile -->
+    <!-- hero text centered -->
     <section class="hero-center-block">
       <p class="hero-eyebrow">Hi, I’m Khushi.</p>
       <h1 class="hero-heading hero-heading-playfair">
@@ -38,35 +38,32 @@
       </p>
     </section>
 
-    <!-- extra space before projects so they sit lower -->
+    <!-- space so you need to scroll to projects -->
     <div class="hero-spacer"></div>
 
-    <!-- projects row further down -->
-    <section class="home-projects-intro">
-      <h2>Selected projects</h2>
+    <!-- projects grid -->
+    <section class="home-projects-intro" id="home-projects">
+      <h2>Projects</h2>
       <div class="home-project-grid">
-        <a href="work.html#freshii" class="home-project-card">
+        <!-- Freshii -->
+        <a href="work.html#freshii" class="home-project-card card-hover">
           <img src="freshii.jpeg" alt="Freshii project cover" />
           <h3>Freshii – Ordering Experience</h3>
-          <p>
-            Making healthy food ordering faster and clearer from browse to checkout.
-          </p>
+          <p>Healthy food ordering that feels faster and clearer end‑to‑end.</p>
         </a>
 
-        <a href="work.html#mejuri" class="home-project-card">
+        <!-- Mejuri -->
+        <a href="work.html#mejuri" class="home-project-card card-hover">
           <img src="Mejuri.jpg" alt="Mejuri activity project cover" />
           <h3>Mejuri – Activity Flow</h3>
-          <p>
-            Reframing a jewellery brand’s task flow to feel more intuitive and calm.
-          </p>
+          <p>A calmer, more focused way to move through jewellery tasks.</p>
         </a>
 
-        <a href="work.html#circlek" class="home-project-card">
+        <!-- Circle K -->
+        <a href="work.html#circlek" class="home-project-card card-hover">
           <img src="circlek.png" alt="Circle K activity project cover" />
           <h3>Circle K – Service Journey</h3>
-          <p>
-            Visualizing convenience‑store touchpoints to uncover experience gaps.
-          </p>
+          <p>Visualizing convenience‑store touchpoints to uncover gaps.</p>
         </a>
       </div>
     </section>
@@ -78,6 +75,4 @@
 
   <script src="script.js"></script>
 </body>
-
-
 </html>
