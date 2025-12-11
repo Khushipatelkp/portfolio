@@ -8,7 +8,9 @@
 </head>
 <body class="home">
   <header class="site-header">
-    <div class="site-logo">KHUSHI PATEL</div>
+    <div class="site-logo">
+      <img src="kp logo.png" alt="Khushi Patel logo" class="logo-img" />
+    </div>
     <nav class="site-nav">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="work.html" class="nav-link">Projects</a>
@@ -16,37 +18,30 @@
     </nav>
   </header>
 
-  <!-- floating sunflower background -->
+  <!-- more sunflowers in background -->
   <div class="sunflower-bg sunflower-bg-1"></div>
   <div class="sunflower-bg sunflower-bg-2"></div>
   <div class="sunflower-bg sunflower-bg-3"></div>
+  <div class="sunflower-bg sunflower-bg-4"></div>
+  <div class="sunflower-bg sunflower-bg-5"></div>
 
-  <main class="home-main">
-    <!-- hero with text + profile side by side -->
-    <section class="hero-split">
-      <div class="hero-copy">
-        <p class="hero-eyebrow">Hi, I’m Khushi.</p>
-        <h1 class="hero-heading">
-          A visual designer who reads between the lines.
-        </h1>
-        <p class="hero-tagline">
-          I shape experiences beyond screens by designing what users feel,
-          not just what they see.
-        </p>
-      </div>
-
-      <div class="hero-profile">
-        <div class="profile-ring">
-          <img
-            src="profile.jpg"
-            alt="Portrait of Khushi Patel"
-            class="profile-photo"
-          />
-        </div>
-      </div>
+  <main class="home-main home-centered">
+    <!-- hero now centered, no profile -->
+    <section class="hero-center-block">
+      <p class="hero-eyebrow">Hi, I’m Khushi.</p>
+      <h1 class="hero-heading hero-heading-playfair">
+        A visual designer who reads between the lines.
+      </h1>
+      <p class="hero-tagline hero-tagline-inter">
+        I shape experiences beyond screens by designing what users feel,
+        not just what they see.
+      </p>
     </section>
 
-    <!-- quick project cards linking to Projects page -->
+    <!-- extra space before projects so they sit lower -->
+    <div class="hero-spacer"></div>
+
+    <!-- projects row further down -->
     <section class="home-projects-intro">
       <h2>Selected projects</h2>
       <div class="home-project-grid">
@@ -83,5 +78,6 @@
 
   <script src="script.js"></script>
 </body>
+
 
 </html>
