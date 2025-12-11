@@ -425,3 +425,109 @@ body {
     padding-top: 120px;
   }
 }
+
+/* Base container max-width so content centers on large screens */
+.home-main.home-centered,
+.about-main {
+  max-width: 960px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 14px 6%;
+  }
+
+  .home-main.home-centered,
+  .about-main {
+    padding: 120px 6% 60px;
+  }
+
+  .project-hero {
+    padding: 80px 6% 60px;
+  }
+
+  .project-hero-inner {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* hero text */
+  .hero-heading-playfair {
+    font-size: 34px;
+  }
+
+  .hero-tagline-inter {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero-spacer {
+    height: 80px;
+  }
+
+  /* stack project cards */
+  .home-project-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 24px;
+  }
+
+  .home-project-card {
+    padding: 20px 18px 22px;
+  }
+
+  /* full‑bleed project sections stack */
+  .project-hero {
+    padding: 100px 6% 60px;
+    min-height: auto;
+  }
+
+  .project-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero-text h1 {
+    font-size: 28px;
+  }
+
+  /* about page */
+  .about-main {
+    padding-top: 110px;
+  }
+
+  .about-copy {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 12px 5%;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .site-nav {
+    gap: 18px;
+  }
+
+  .hero-heading-playfair {
+    font-size: 30px;
+  }
+
+  .hero-eyebrow {
+    font-size: 13px;
+  }
+
+  .project-hero {
+    padding-top: 96px;
+  }
+
+  .project-hero-text h1 {
+    font-size: 24px;
+  }
+}
