@@ -86,15 +86,14 @@ body {
 .hero-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 16px;   /* bigger */
+  font-size: 16px;
   color: #777;
   margin-bottom: 22px;
 }
 
-
 .hero-heading-playfair {
   font-family: "Playfair Display", serif;
-  font-size: 56px;      /* bigger like Danna */
+  font-size: 56px;
   line-height: 1.1;
   margin-bottom: 18px;
 }
@@ -102,16 +101,15 @@ body {
 .hero-tagline-inter {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;      /* bigger description */
+  font-size: 20px;
   color: #444;
   max-width: 620px;
   margin: 0 auto;
 }
 
 .hero-spacer {
-  height: 220px;   /* more space before projects start */
+  height: 220px;
 }
-
 
 /* HOME PROJECT GRID */
 
@@ -125,7 +123,7 @@ body {
 .home-project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 56px;    /* more side‑to‑side space */
+  column-gap: 56px;
   row-gap: 0;
 }
 
@@ -158,9 +156,6 @@ body {
   font-size: 15px;
   color: #555;
 }
-
-
-
 
 /* card hover */
 
@@ -390,42 +385,6 @@ body {
   color: #555;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .home-main.home-centered {
-    padding-top: 120px;
-  }
-
-  .hero-heading-playfair {
-    font-size: 34px;
-  }
-
-  .home-project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-spacer {
-    height: 80px;
-  }
-
-  .project-hero {
-    padding-top: 120px;
-  }
-
-  .project-hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .project-hero-text h1 {
-    font-size: 32px;
-  }
-
-  .about-main {
-    padding-top: 120px;
-  }
-}
-
 /* Base container max-width so content centers on large screens */
 .home-main.home-centered,
 .about-main {
@@ -452,6 +411,7 @@ body {
   }
 }
 
+/* MAIN MOBILE/TABLET BREAKPOINT */
 @media (max-width: 900px) {
   /* hero text */
   .hero-heading-playfair {
@@ -463,11 +423,12 @@ body {
     max-width: 100%;
   }
 
+  /* push projects further down on mobile too */
   .hero-spacer {
-    height: 80px;
+    height: 140px;
   }
 
-  /* stack project cards */
+  /* stack project cards and make images smaller */
   .home-project-grid {
     grid-template-columns: 1fr;
     column-gap: 0;
@@ -476,6 +437,11 @@ body {
 
   .home-project-card {
     padding: 20px 18px 22px;
+  }
+
+  .home-project-card img {
+    max-width: 260px;
+    margin: 0 auto 12px;
   }
 
   /* full‑bleed project sections stack */
@@ -502,6 +468,7 @@ body {
   }
 }
 
+/* small phones */
 @media (max-width: 600px) {
   .site-header {
     padding: 12px 5%;
